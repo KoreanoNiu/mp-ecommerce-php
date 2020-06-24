@@ -20,7 +20,7 @@
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     $preference->items = array($item);
     $preference->save();
-    
+
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -154,11 +154,7 @@
                                             <?php echo "$" . $_POST['unit'] ?>
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
-                                    <script
-                                        src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                        data-preference-id="<?php echo $preference->id; ?>">
-                                    </script>
+                                    <button type="submit" class="mercadopago-button" formmethod="post"><a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a></button>
                                 </div>
                             </div>
                         </div>
