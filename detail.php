@@ -3,7 +3,8 @@
     require __DIR__ .  '/vendor/autoload.php';
 
     // Agrega credenciales
-    
+    MercadoPago\SDK::setAccessToken('APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389');
+
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     
@@ -154,7 +155,7 @@
                                     <button type="submit" class="mercadopago-button" formmethod="post">Pagar</button>
                                     <script
                                         src="https://www.mercadopago.com.mx/integrations/v1/web-payment-checkout.js"
-                                        data-preference-id="<?php echo $preference->id; ?>">
+                                        data-preference-id="<?php MercadoPago\SDK::setClientId('535650015'); MercadoPago\SDK::setClientSecret('qatest9980'); ?>">
                                     </script>
                                 </div>
                             </div>
