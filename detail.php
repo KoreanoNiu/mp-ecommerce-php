@@ -38,6 +38,12 @@
 
         $preference->payer = $payer;
 
+        $payment_methods = new MercadoPago\Payment_method();
+
+        $payment_methods->excluded_payment_methods = array(
+            "id" => "master"
+        );
+
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
         $preference->back_urls= array(
@@ -209,4 +215,6 @@
     echo('<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>");
 
     print_r($preference);
+
+    echo '<br>';
 ?>
