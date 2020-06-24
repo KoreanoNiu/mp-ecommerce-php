@@ -46,6 +46,8 @@
             "pending" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-pendiente.php"
         );
 
+        $preference->auto_return = "approved";
+
         $preference->items = array($item);
         $preference->save();
     }else{
@@ -207,6 +209,4 @@
     echo('<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>");
 
     print_r($preference);
-
-    print_r($payer);
 ?>
