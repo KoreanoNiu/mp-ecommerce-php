@@ -20,8 +20,6 @@
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     $preference->items = array($item);
     $preference->save();
-
-    header("Location:" . $preference['response']['sandbox_init_point']);
     
 ?>
 <!DOCTYPE html>
