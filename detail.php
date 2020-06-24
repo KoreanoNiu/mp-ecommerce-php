@@ -38,8 +38,10 @@
 
         $preference->payer = $payer;
 
-        $preference->excluded_payment_methods = array(
-            "id" => "master"
+        $preference->payment_methods = array(
+            "excluded_payment_methods" => array(
+                array("id" => "master")
+            )
         );
 
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
