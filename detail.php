@@ -179,4 +179,6 @@
 
 <?php 
     echo('<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>");
+
+    print_r($preference);
 ?>
