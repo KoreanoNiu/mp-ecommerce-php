@@ -21,14 +21,6 @@
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     $preference->items = array($item);
     $preference->save();
-
-    $customer = new MercadoPago\Customer();
-
-    $client->id = '535650015';
-    $client->email = 'test_user_58295862@testuser.com';
-
-    $customer->$client = array($client);
-    $customer->save();
     
 ?>
 <!DOCTYPE html>
