@@ -11,8 +11,6 @@
 
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
-    
-    $preference->client_id = "535650015";
 
     // Crea un ítem en la preferencia
     $item = new MercadoPago\Item();
