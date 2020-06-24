@@ -45,6 +45,7 @@
         );
 
         $preference->items = array($item);
+        $preference->prayer = array($payer);
         $preference->save();
     }else{
         header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
