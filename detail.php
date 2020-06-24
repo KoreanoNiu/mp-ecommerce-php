@@ -180,13 +180,13 @@
                                             </h3>
                                         </div>
                                         <h3 >
-                                            <?php echo $_POST['price'] ?>
+                                            <?php echo "$: " . $_POST['price'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?> 
+                                            <?php echo "Cantidad: " . $_POST['unit'] ?> 
                                         </h3>
                                     </div>
-                                    <a href="<?php echo $preference->init_point; ?>"><button type="submit" class="mercadopago-button" formmethod="post">Pagar con Mercado Pago</button></a>
+                                    <a href="<?php echo $preference->init_point; ?>"><button type="submit" class="mercadopago-button" formmethod="post">Pagar la compra</button></a>
                                 </div>
                             </div>
                         </div>
