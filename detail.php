@@ -43,7 +43,7 @@
                 array("id" => "amex")
             ),
             "excluded_payment_types" => array(
-                array("id" => "atm")
+                array("id" => "ticket")
             ),
             "installments" => 6
         );
