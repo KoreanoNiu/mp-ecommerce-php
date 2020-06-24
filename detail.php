@@ -21,6 +21,9 @@
     $preference->items = array($item);
     $preference->save();
 
+    MercadoPago\SDK::setCliendId('535650015');
+    MercadoPago\SDK::setCliendSecret('qatest9980');
+
     $payer = new MercadoPago\Payer();
     $payer->name = "Charles";
     $payer->surname = "Luevano";
