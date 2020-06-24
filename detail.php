@@ -7,8 +7,6 @@
         MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
         
     
-        // Crea un objeto pagador
-    
         // Crea un objeto de preferencia
         $preference = new MercadoPago\Preference();
     
@@ -21,6 +19,7 @@
         $item->quantity = $_POST['unit'];
         $item->unit_price = $_POST['price'];
     
+        //Crea un Payer
         $payer = new MercadoPago\Payer();
     
         $payer->name = "Lalo";
@@ -39,6 +38,12 @@
     
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
+        $preference->back_urls= array(
+            "success" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-aceptado.php",
+            "failure" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-cancelado.php",
+            "pending" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-pendiente.php"
+        );
+
         $preference->items = array($item);
         $preference->save();
     }else{
