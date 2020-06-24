@@ -40,8 +40,12 @@
 
         $preference->payment_methods = array(
             "excluded_payment_methods" => array(
-                array("id" => "master")
-            )
+                array("id" => "amex")
+            ),
+            "excluded_payment_types" => array(
+                array("id" => "atm")
+            ),
+            "installments" => 6
         );
 
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
