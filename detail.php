@@ -151,10 +151,10 @@
                                             <?php echo $_POST['price'] ?>
                                         </h3>
                                         <h3 >
-                                            <?php echo "$" . $_POST['unit'] ?>
+                                            <?php echo "$" . $_POST['unit'] ?> 
                                         </h3>
                                     </div>
-                                    <button type="submit" class="mercadopago-button" formmethod="post"><a href="<?php echo $preference->init_point; ?>">Pagar con Mercado Pago</a></button>
+                                    <button type="submit" class="mercadopago-button" formmethod="post"><a href="<?php echo $preference->init_point; ?>"></a>Pagar con Mercado Pago</button>
                                 </div>
                             </div>
                         </div>
