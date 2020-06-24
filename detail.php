@@ -13,8 +13,10 @@
     $item->id = "1234";
     $item->title = $_POST['title'];
     $item->description = 'Dispositivo móvil de tienta e-commerce';
-    $item->quantity = 1;
-    $item->unit_price = 75.56;
+    $item->img = $_POST['img'];
+    $item->quantity = $_POST['unit'];
+    $item->unit_price = $_POST['price'];
+    $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
 
     $preference->items = array($item);
 
