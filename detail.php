@@ -14,7 +14,7 @@
     $item->id = "1234";
     $item->title = $_POST['title'];
     $item->description = 'Dispositivo móvil de tienta e-commerce';
-    $item->picture_url = 'https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2);
+    $item->picture_url = $_POST['img'];
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
