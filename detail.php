@@ -181,7 +181,7 @@
 
 <?php 
 
-    $cadena = substr($_POST['img']), 1);
+    $cadena = substr($_POST['img'], 2);
     
-    print_r($cadena);
+    echo $cadena;
 ?>
