@@ -43,9 +43,8 @@
             "failure" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-cancelado.php",
             "pending" => "https://koreanoniu-mp-ecommerce-php.herokuapp.com/pago-pendiente.php"
         );
-
+        $payer->save();
         $preference->items = array($item);
-        $preference->prayer = array($payer);
         $preference->save();
     }else{
         header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
