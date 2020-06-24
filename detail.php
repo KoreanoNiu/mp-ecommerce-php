@@ -18,6 +18,7 @@
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
+    $item->client_id = "535650015";
     $preference->items = array($item);
     $preference->save();
     
