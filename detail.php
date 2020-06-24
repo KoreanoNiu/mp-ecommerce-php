@@ -38,7 +38,7 @@
 
         $preference->payer = $payer;
 
-        $payment_methods = new MercadoPago\payment_methods();
+        $payment_methods = new MercadoPago\Payment_methods();
 
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
