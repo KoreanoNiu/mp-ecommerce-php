@@ -3,23 +3,31 @@
     require __DIR__ .  '/vendor/autoload.php';
 
     // Agrega credenciales
-    
-    MercadoPago\SDK::setAccessToken('TEST-7734609094343991-062405-3f95b97ed7f48d0de502a44910c075f3-590053504');
-    
-    // Crea un objeto de preferencia
-    $preference = new MercadoPago\Preference();
-    
-    // Crea un ítem en la preferencia
-    $item = new MercadoPago\Item();
-    $item->id = "1234";
-    $item->title = $_POST['title'];
-    $item->description = 'Dispositivo móvil de tienta e-commerce';
-    $item->picture_url = '<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>";
-    $item->quantity = $_POST['unit'];
-    $item->unit_price = $_POST['price'];
-    $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
-    $preference->items = array($item);
-    $preference->save();
+
+    $mp = new MP("7734609094343991", "hyC4RGKCoudRmk1iPuGIKu6JnMd0IYw0");
+
+    $preference_data = array(
+        "items" => [
+            [
+                "id" => "1234",
+                "title" => $_POST['title'],
+                "description" => 'Dispositivo móvil de tienta e-commerce',
+                "picture_url" => '<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>",
+                "quantity" => $_POST['unit'],
+                "unit_price" => $_POST['price'],
+                "external_reference" => 'carlosgarcia@cbtis52.edu.mx'
+            ]
+        ],
+
+        "back_urls" => [
+            "success" => $regreso,
+            "failure" => $cancelado
+        ]
+    );
+
+    $preference = $mp->create_preference($preference_data);
+
+    header("Location:" . $preference['response']['sandbox_init_point']);
     
 ?>
 <!DOCTYPE html>
