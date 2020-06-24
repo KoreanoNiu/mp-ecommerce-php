@@ -5,13 +5,12 @@
     // Agrega credenciales
     
     MercadoPago\SDK::setAccessToken('APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389');
-    
+    MercadoPago\SDK::setCollectorId('491494389');
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     
     // Crea un ítem en la preferencia
     $item = new MercadoPago\Item();
-    $item->collector_id = "491494389";
     $item->id = "1234";
     $item->title = $_POST['title'];
     $item->description = 'Dispositivo móvil de tienta e-commerce';
