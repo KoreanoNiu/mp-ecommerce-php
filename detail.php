@@ -20,7 +20,6 @@
     $item->picture_url = '<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>";
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
-    $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
 
     $payer = new MercadoPago\Payer();
 
@@ -37,6 +36,10 @@
         "street_number" => 1602,
         "zip_code" => "03940"
     );
+
+    $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
+
+    $preference->auto_return = "approved";
 
     $preference->items = array($item);
     $preference->save();
