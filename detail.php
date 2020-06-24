@@ -35,6 +35,8 @@
             "street_number" => 1602,
             "zip_code" => "03940"
         );
+
+        $preference->payer = $payer;
     
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
