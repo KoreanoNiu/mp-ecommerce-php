@@ -20,25 +20,6 @@
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     $preference->items = array($item);
     $preference->save();
-
-    MercadoPago\SDK::setCliendId('535650015');
-    MercadoPago\SDK::setCliendSecret('qatest9980');
-
-    $payer = new MercadoPago\Payer();
-    $payer->name = "Charles";
-    $payer->surname = "Luevano";
-    $payer->email = "charles@hotmail.com";
-    $payer->date_created = "2018-06-02T12:58:41.425-04:00";
-    $payer->phone = array(
-      "area_code" => "",
-      "number" => "949 128 866"
-    );
-
-    $payer->address = array(
-      "street_name" => "Cuesta Miguel Armendáriz",
-      "street_number" => 1004,
-      "zip_code" => "11020"
-    );
     
 ?>
 <!DOCTYPE html>
