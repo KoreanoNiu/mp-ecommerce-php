@@ -1,7 +1,5 @@
 <?php
     if(isset($_POST['title'])){
-        header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
-    }else{
         require __DIR__ .  '/vendor/autoload.php';
 
         // Agrega credenciales
@@ -43,6 +41,8 @@
     
         $preference->items = array($item);
         $preference->save();
+    }else{
+        header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
     }
 ?>
 <!DOCTYPE html>
