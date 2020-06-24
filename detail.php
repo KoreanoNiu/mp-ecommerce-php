@@ -11,17 +11,24 @@
     
     // Crea un ítem en la preferencia
     $item = new MercadoPago\Item();
+    $item->collector_id = "491494389";
     $item->id = "1234";
     $item->title = $_POST['title'];
     $item->description = 'Dispositivo móvil de tienta e-commerce';
-    $item->picture_url = $_POST['img'];
+    $item->picture_url = 'https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2);
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
-
     $preference->items = array($item);
-
     $preference->save();
+
+    $customer = new MercadoPago\Customer();
+
+    $client->id = '535650015';
+    $client->email = 'test_user_58295862@testuser.com';
+
+    $customer->$client = array($client);
+    $customer->save();
     
 ?>
 <!DOCTYPE html>
