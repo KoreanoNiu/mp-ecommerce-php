@@ -173,7 +173,7 @@
 
 <?php 
     $asd = "TEST-7734609094343991-062405-3f95b97ed7f48d0de502a44910c075f3-590053504";
-    $xd = "https://api.mercadolibre.com/users/test_user?access_token=" . $xd .";";
+    $xd = "https://api.mercadolibre.com/users/test_user?access_token=" . $asd .";";
 
     print_r($xd);
 ?>
