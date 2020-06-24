@@ -9,24 +9,6 @@
 
     // Crea un objeto pagador
 
-    $payer = new MercadoPago\Payer();
-
-    $payer->name = "Lalo";
-    $payer->surname = "Landa";
-    $payer->email = "test_user_58295862@testuser.com";
-    $payer->phone = array(
-        "area_code" => "52",
-        "number" => "55349737300"
-    );
-    $payer->address = array(
-        "street_name" => "Insurgentes Sur",
-        "street_number" => 1602,
-        "zip_code" => "03940"
-    );
-
-    $payer->save();
-
-
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     
@@ -39,6 +21,23 @@
     $item->quantity = $_POST['unit'];
     $item->unit_price = $_POST['price'];
     $item->external_reference = 'carlosgarcia@cbtis52.edu.mx';
+
+    $payer = new MercadoPago\Payer();
+
+    $payer->name = "Lalo";
+    $payer->surname = "Landa";
+    $payer->email = "test_user_58295862@testuser.com";
+    $payer->phone = array(
+        "area_code" => "52",
+        "number" => "55349737300"
+    );
+    
+    $payer->address = array(
+        "street_name" => "Insurgentes Sur",
+        "street_number" => 1602,
+        "zip_code" => "03940"
+    );
+
     $preference->items = array($item);
     $preference->save();
 
