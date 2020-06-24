@@ -3,7 +3,6 @@
     require __DIR__ .  '/vendor/autoload.php';
 
     // Agrega credenciales
-    MercadoPago\SDK::setAccessToken('APP_USR-6718728269189792-112017-dc8b338195215145a4ec035fdde5cedf-491494389');
     MercadoPago\SDK::setClientId('535650015');
     MercadoPago\SDK::setClientSecret('qatest9980');
     
