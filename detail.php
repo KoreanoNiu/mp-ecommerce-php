@@ -6,6 +6,27 @@
     
     MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
     
+
+    // Crea un objeto pagador
+
+    $payer = new MercadoPago\Payer();
+
+    $payer->name = "Lalo";
+    $payer->surname = "Landa";
+    $payer->email = "test_user_58295862@testuser.com";
+    $payer->phone = array(
+        "area_code" => "52",
+        "number" => "55349737300"
+    );
+    $payer->address = array(
+        "street_name" => "Insurgentes Sur",
+        "street_number" => 1602,
+        "zip_code" => "03940"
+    );
+
+    $payer->save();
+
+
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     
