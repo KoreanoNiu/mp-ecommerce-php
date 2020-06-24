@@ -1,47 +1,49 @@
 <?php
+    if(isset($_POST['title'])){
+        header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
+    }else{
+        require __DIR__ .  '/vendor/autoload.php';
 
-    require __DIR__ .  '/vendor/autoload.php';
-
-    // Agrega credenciales
-    MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
-    MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
+        // Agrega credenciales
+        MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
+        MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
+        
     
-
-    // Crea un objeto pagador
-
-    // Crea un objeto de preferencia
-    $preference = new MercadoPago\Preference();
-
-    // Crea un ítem en la preferencia
-    $item = new MercadoPago\Item();
-    $item->id = "1234";
-    $item->title = $_POST['title'];
-    $item->description = 'Dispositivo móvil de tienta e-commerce';
-    $item->picture_url = '<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>";
-    $item->quantity = $_POST['unit'];
-    $item->unit_price = $_POST['price'];
-
-    $payer = new MercadoPago\Payer();
-
-    $payer->name = "Lalo";
-    $payer->surname = "Landa";
-    $payer->email = "test_user_58295862@testuser.com";
-    $payer->phone = array(
-        "area_code" => "52",
-        "number" => "55349737300"
-    );
+        // Crea un objeto pagador
     
-    $payer->address = array(
-        "street_name" => "Insurgentes Sur",
-        "street_number" => 1602,
-        "zip_code" => "03940"
-    );
-
-    $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
-
-    $preference->items = array($item);
-    $preference->save();
-
+        // Crea un objeto de preferencia
+        $preference = new MercadoPago\Preference();
+    
+        // Crea un ítem en la preferencia
+        $item = new MercadoPago\Item();
+        $item->id = "1234";
+        $item->title = $_POST['title'];
+        $item->description = 'Dispositivo móvil de tienta e-commerce';
+        $item->picture_url = '<img src="https://koreanoniu-mp-ecommerce-php.herokuapp.com/' . substr($_POST['img'], 2) . '">' . "</img>";
+        $item->quantity = $_POST['unit'];
+        $item->unit_price = $_POST['price'];
+    
+        $payer = new MercadoPago\Payer();
+    
+        $payer->name = "Lalo";
+        $payer->surname = "Landa";
+        $payer->email = "test_user_58295862@testuser.com";
+        $payer->phone = array(
+            "area_code" => "52",
+            "number" => "55349737300"
+        );
+        
+        $payer->address = array(
+            "street_name" => "Insurgentes Sur",
+            "street_number" => 1602,
+            "zip_code" => "03940"
+        );
+    
+        $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
+    
+        $preference->items = array($item);
+        $preference->save();
+    }
 ?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
