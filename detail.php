@@ -40,10 +40,6 @@
 
         $payment_methods = new MercadoPago\Payment_method();
 
-        $payment_methods->excluded_payment_methods = array(
-            "id" => "master"
-        );
-
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
         $preference->back_urls= array(
