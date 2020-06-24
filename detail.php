@@ -3,7 +3,7 @@
     require __DIR__ .  '/vendor/autoload.php';
 
     // Agrega credenciales
-    
+    MercadoPago\SDK::setIntegratorId("dev_24c65fb163bf11ea96500242ac130004");
     MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
     
 
@@ -12,6 +12,8 @@
     // Crea un objeto de preferencia
     $preference = new MercadoPago\Preference();
     
+    $preference->client_id = "535650015";
+
     // Crea un ítem en la preferencia
     $item = new MercadoPago\Item();
     $item->id = "1234";
@@ -38,8 +40,6 @@
     );
 
     $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
-
-    $preference->auto_return = "approved";
 
     $preference->items = array($item);
     $preference->save();
