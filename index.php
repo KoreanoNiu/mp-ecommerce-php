@@ -1,3 +1,23 @@
+<?php
+
+    MercadoPago\SDK::setAccessToken("ENV_ACCESS_TOKEN");
+
+    switch($_POST["type"]) {
+        case "payment":
+            $payment = MercadoPago\Payment.find_by_id($_POST["id"]);
+            break;
+        case "plan":
+            $plan = MercadoPago\Plan.find_by_id($_POST["id"]);
+            break;
+        case "subscription":
+            $plan = MercadoPago\Subscription.find_by_id($_POST["id"]);
+            break;
+        case "invoice":
+            $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
+            break;
+        }
+
+?>
 <!DOCTYPE html>
 <html class="supports-animation supports-columns svg no-touch no-ie no-oldie no-ios supports-backdrop-filter as-mouseuser" lang="en-US"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
