@@ -6,12 +6,16 @@
 
     $entityBody = file_get_contents('php://input');
     
-    $fichero = './webhook.json';
+    if(isset($entityBody)){
+        $fichero = './webhook.json';
 
-    $actual = file_get_contents($fichero);
-
-    $actual .= $entityBody;
-
-    file_put_contents($fichero, $actual);
+        $actual = file_get_contents($fichero);
+    
+        $actual .= $entityBody;
+    
+        file_put_contents($fichero, $actual);
+    } else{
+        header ('Location: https://koreanoniu-mp-ecommerce-php.herokuapp.com/');
+    }
 
 ?>
