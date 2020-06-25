@@ -1,7 +1,6 @@
 <?php 
+    $host = 'https://' . $_SERVER["HTTP_HOST"];
+    $url= $host . $_SERVER["REQUEST_URI"];
 
-    $json = file_get_contents('php://input');
-    $obj = json_decode($json);
-    echo $obj->collection_id;
-
+    echo '{' . $url . '}';
 ?>
