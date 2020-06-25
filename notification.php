@@ -11,4 +11,7 @@
     $json_string = json_encode($data);
     $file = 'clientes.json';
     file_put_contents($file, $json_string);
+
+    echo $json_string;
+    echo $data;
 ?>
