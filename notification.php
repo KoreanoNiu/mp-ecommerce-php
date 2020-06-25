@@ -7,8 +7,9 @@
     $entityBody = file_get_contents('php://input');
 
     $data = json_decode($entityBody, TRUE);
-    
-    $json_string .= json_encode($data);
+    $data2 = array_search('body', $data, true);
+
+    $json_string .= json_encode($data2);
     $file = './clientes.json';
     file_put_contents($file, $json_string);
 
