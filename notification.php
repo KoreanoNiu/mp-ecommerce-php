@@ -18,4 +18,6 @@
             $plan = MercadoPago\Invoice.find_by_id($_POST["id"]);
             break;
     }
+
+    print_r($_POST['type']);
 ?>
