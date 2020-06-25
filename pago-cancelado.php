@@ -14,5 +14,5 @@
         $split_complete[$page_name][$final_split[0]] = $final_split[1];
     }
 
-    var_dump($split_complete);
+    echo $split_complete;
 ?>
