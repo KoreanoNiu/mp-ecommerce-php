@@ -6,7 +6,7 @@
 
     $entityBody = file_get_contents('php://input');
 
-    $fichero = './clientes.json';
+    $fichero = './webhook.json';
 
     $actual = file_get_contents($fichero);
 

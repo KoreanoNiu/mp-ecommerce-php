@@ -1,7 +1,7 @@
 <?php 
 
-    print_r($_GET['payment_type']);
-    print_r($_GET['external_reference']);
-    print_r($_GET['collection_id']);
+    echo 'Payment type: ' . ($_GET['payment_type']);
+    echo 'External reference: ' . ($_GET['external_reference']);
+    echo 'Collection id: '. ($_GET['collection_id']);
 
 ?>
