@@ -11,7 +11,7 @@
     $arr_clientes = array('nombre'=> 'Jose', 'edad'=> '20', 'genero'=> 'masculino', 'email'=> 'correodejose@dominio.com', 'localidad'=> 'Madrid', 'telefono'=> '91000000');
 
     $json_string = json_encode($arr_clientes);
-    $file = 'https://koreanoniu-mp-ecommerce-php.herokuapp.com/clientes.json';
+    $file = './clientes.json';
     file_put_contents($file, $json_string);
 
     echo $json_string;
