@@ -48,7 +48,7 @@
             "installments" => 6
         );
 
-        $preference->notification_url = "https://koreanoniu-mp-ecommerce-php.herokuapp.com/index.php";
+        $preference->notification_url = "https://koreanoniu-mp-ecommerce-php.herokuapp.com/notification.php";
         $preference->external_reference = 'carlosgarcia@cbtis52.edu.mx';
     
         $preference->back_urls= array(
