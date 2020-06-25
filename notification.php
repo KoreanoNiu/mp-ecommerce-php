@@ -6,7 +6,7 @@
 
     $entityBody = file_get_contents('php://input');
     
-    if(isset($entityBody)){
+    if(!isset($entityBody)){
         $fichero = './webhook.json';
 
         $actual = file_get_contents($fichero);
