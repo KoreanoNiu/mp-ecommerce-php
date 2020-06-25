@@ -16,10 +16,11 @@
 
     $data = json_decode($entityBody, TRUE);
 
-    $json_string = json_encode($data);
-    $file = './clientes.json';
-    file_put_contents($file, $json_string);
+    $fichero = './clientes.json';
 
-    echo $json_string;
-    echo $data;
+    $actual = file_get_contents($fichero);
+
+    $actual .= $data;
+
+    file_put_contents($fichero, $actual);
 ?>
