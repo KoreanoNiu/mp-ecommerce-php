@@ -12,7 +12,7 @@
         )
     );
 
-    $data = json_decode($entityBody, TRUE, $opciones);
+    $data = json_decode($entityBody, TRUE);
 
     $json_string = json_encode($data);
     $file = './clientes.json';
