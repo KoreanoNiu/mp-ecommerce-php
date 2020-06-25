@@ -10,7 +10,7 @@
 
     $data2 .= $data;
 
-    $json_string .= json_encode($data2);
+    $json_string = json_encode($data2);
     $file = './clientes.json';
     file_put_contents($file, $json_string);
 
