@@ -4,13 +4,15 @@
 
     MercadoPago\SDK::setAccessToken('APP_USR-8058997674329963-062418-89271e2424bb1955bc05b1d7dd0977a8-592190948');
 
-    $entityBody = file_get_contents('php://input');
-
     $opciones = array(
         'http'=>array(
-          'method'=>"POST",
+          'method'=>"POST"
         )
     );
+
+    $contexto = stream_context_create($opciones);
+
+    $entityBody = file_get_contents('php://input', false, $contexto);
 
     $data = json_decode($entityBody, TRUE);
 
