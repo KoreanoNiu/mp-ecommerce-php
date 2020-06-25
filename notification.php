@@ -9,7 +9,7 @@
     $data = json_decode($entityBody, TRUE);
     
     $json_string = json_encode($data);
-    $file = 'clientes.json';
+    $file = 'https://koreanoniu-mp-ecommerce-php.herokuapp.com/clientes.json';
     file_put_contents($file, $json_string);
 
     echo $json_string;
